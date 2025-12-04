@@ -5,33 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BKT Motors</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="container">
-    <h1>BKT Motors</h1>
+<div class="background"></div>
 
-    <!-- Authentication Buttons -->
-    <div class="toggle-buttons">
-        <button onclick="showLogin()">Login</button>
-        <button onclick="showSignup()">Sign Up</button>
+<div class="card">
+    <h1 class="title">BKT Motors</h1>
+
+    <div class="tabs">
+        <button id="loginTab" class="active" onclick="showLogin()">Login</button>
+        <button id="signupTab" onclick="showSignup()">Sign Up</button>
     </div>
 
     <!-- Login Form -->
-    <form id="loginForm" class="form hidden">
-        <h2>Login</h2>
-        <input type="email" id="loginEmail" placeholder="Email" required />
-        <input type="password" id="loginPassword" placeholder="Password" required />
-        <button type="submit">Login</button>
+    <form id="loginForm" class="form">
+        <div class="input-group">
+            <input type="email" id="loginEmail" required />
+            <label>Email</label>
+        </div>
+
+        <div class="input-group">
+            <input type="password" id="loginPassword" required />
+            <label>Password</label>
+        </div>
+
+        <button class="submit-btn" type="submit">Login</button>
     </form>
 
     <!-- Signup Form -->
     <form id="signupForm" class="form hidden">
-        <h2>Create Account</h2>
-        <input type="text" id="signupName" placeholder="Full Name" required />
-        <input type="email" id="signupEmail" placeholder="Email" required />
-        <input type="password" id="signupPassword" placeholder="Password" required />
-        <button type="submit">Sign Up</button>
+        <div class="input-group">
+            <input type="text" id="signupName" required />
+            <label>Full Name</label>
+        </div>
+
+        <div class="input-group">
+            <input type="email" id="signupEmail" required />
+            <label>Email</label>
+        </div>
+
+        <div class="input-group">
+            <input type="password" id="signupPassword" required />
+            <label>Password</label>
+        </div>
+
+        <button class="submit-btn" type="submit">Create Account</button>
     </form>
 
     <p id="message"></p>
@@ -40,3 +62,4 @@
 <script src="app.js"></script>
 </body>
 </html>
+
